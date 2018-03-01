@@ -4,5 +4,7 @@ RUN pecl install xdebug-2.6.0 \
     && docker-php-ext-enable xdebug \
     && docker-php-ext-install pdo pdo_mysql
 
-COPY php-env.ini /usr/local/etc/php/php.ini
+ENV DISPLAY_ERRORS="On"
+
+COPY php.ini /usr/local/etc/php/php.ini
 COPY index.php /var/www/html/

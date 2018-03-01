@@ -1,5 +1,5 @@
 FROM composer as backend
-#FROM composer
+
 WORKDIR /app
 
 COPY composer.json composer.lock /app/
@@ -23,5 +23,4 @@ RUN pecl install xdebug-2.6.0 \
 
 WORKDIR /app
 COPY --from=backend /app /var/www/html/
-#COPY --from=0 /app /var/www/html/
-COPY php-env.ini /usr/local/etc/php/php.ini
+COPY php.ini /usr/local/etc/php/php.ini
