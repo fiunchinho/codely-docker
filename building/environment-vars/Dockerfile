@@ -1,8 +1,11 @@
 FROM php:7.2-apache
 
-RUN pecl install xdebug-2.6.0 \
-    && docker-php-ext-enable xdebug \
-    && docker-php-ext-install pdo pdo_mysql
+LABEL maintainer="jose@armesto.net"
+LABEL application="codelytv-hello-world"
+
+RUN pecl install xdebug-2.6.0
+RUN docker-php-ext-enable xdebug
+RUN docker-php-ext-install pdo pdo_mysql
 
 ENV DISPLAY_ERRORS="On"
 
