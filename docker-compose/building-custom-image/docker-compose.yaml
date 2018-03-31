@@ -4,8 +4,6 @@ services:
     build:
       context: ${PWD}
       dockerfile: Dockerfile
-    volumes:
-      - ${PWD}:/var/www/html
     ports:
       - 8000:80
 

@@ -9,8 +9,6 @@ services:
       - MYSQL_HOST
       - MYSQL_USER
       - MYSQL_PASSWORD
-    volumes:
-      - ${PWD}:/var/www/html
     ports:
       - 8000:80
     depends_on:

@@ -10,7 +10,7 @@ $connectionParams = [
     'driver'    => 'pdo_mysql',
 ];
 
-$config = new \Doctrine\DBAL\Configuration();
+$config 	= new \Doctrine\DBAL\Configuration();
 $connection = \Doctrine\DBAL\DriverManager::getConnection($connectionParams, $config);
 
 $users = $connection->fetchAll("SELECT id, name, lastname FROM users");

@@ -9,8 +9,6 @@ services:
       - MYSQL_HOST=mysql
       - MYSQL_USER=root
       - MYSQL_PASSWORD=root
-    volumes:
-      - ${PWD}:/var/www/html
     ports:
       - 8000:80
     depends_on:
